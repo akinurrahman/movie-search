@@ -33,7 +33,7 @@ const AppState = (props) => {
       getMovies(`${API_url}&s=${query}`);
     }, 500);
     return () => clearTimeout(timerOut);
-  }, [query]);
+  }, [query, API_url]);
 
   const contextValue = {
     isError,
