@@ -31,9 +31,9 @@ const AppState = (props) => {
   useEffect(() => {
     let timerOut = setTimeout(() => {
       getMovies(`${API_url}&s=${query}`);
-    }, 500);
+    }, 800);
     return () => clearTimeout(timerOut);
-  }, [query]);
+  }, [query, API_url]);
 
   const contextValue = {
     isError,
@@ -43,9 +43,7 @@ const AppState = (props) => {
     setQuery,
   };
   return (
-    <>
-      <Context.Provider value={contextValue}>{props.children}</Context.Provider>
-    </>
+    <Context.Provider value={contextValue}>{props.children}</Context.Provider>
   );
 };
 
