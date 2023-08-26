@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import Context from "./AppContext";
 
 const AppState = (props) => {
-  const API_url = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}`;
+  const API_url = `http://www.omdbapi.com/?apikey=51b0f255`;
   const [movie, setMovie] = useState([]);
   const [isError, setIsError] = useState({ show: "False", Message: "" });
-  const [query, setQuery] = useState("Infinity War");
+  const [query, setQuery] = useState("Spider-Man");
 
   const getMovies = async (url) => {
     try {
