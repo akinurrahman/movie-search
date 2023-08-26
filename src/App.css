@@ -1,38 +1,109 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500&family=Lora:wght@400;500&family=Poppins:wght@400;600&display=swap");
+
+body {
+  background: #f2f4fc;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* search css  */
+.search-section {
+  margin: auto;
   text-align: center;
+  margin: 1rem 0;
+}
+h2 {
+  font-family: "Lora", serif;
+  color: #4a5c6c;
+  font-size: 2.5rem;
+  transition: all 0.5s linear;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  width: 85%;
+  border-radius: 1.875rem;
+  border: none;
+  border: .0625rem solid var(--border-clr);
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  /* border-color: var(--border-clr); */
+  box-shadow: rgba(0, 0, 0, 0.1) 0rem .0625rem .1875rem 0rem,
+    rgba(0, 0, 0, 0.06) 0rem .0625rem .125rem 0rem;
+  outline: none;
+  margin-top: 2rem;
+}
+.card-error p {
+  color: red;
+  margin-top: 1rem;
+  font-size: 1.8rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* card hover */
+.hover-zoom {
+  transition: transform 0.3s ease;
+}
+.hover-zoom:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.hover-zoom  {
+  border-radius: .75rem !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Add your CSS to style the SingleMovie component */
+.movie-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #f0f0f0;
+}
+
+.movie-card {
+  background-color: white;
+  border-radius: .5rem;
+  box-shadow: 0rem .125rem .375rem rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+}
+
+.movie-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin: .3125rem 0;
+}
+
+.back-btn {
+  margin-top: 1.25rem;
+  text-decoration: none;
+  background-color: #007bff;
   color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.back-btn:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
